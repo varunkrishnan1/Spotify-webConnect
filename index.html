@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Now Playing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card bg-black text-center p-3 shadow-lg" style="width: 22rem;">
+    <h6 class="text-success">Now Playing on Spotify</h6>
+
+    <!-- Spotify Now Playing Embed -->
+      <img 
+        id="spotify-widget"
+        src="https://spotify-github-profile.kittinanx.com/api/view?uid=31th35o7xchn42xsuon4n3p2iiz4&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false" 
+        alt="Spotify Now Playing" 
+        width="100%" 
+        class="rounded shadow my-2"
+      >
+    </a>
+
+    <small class="text-muted">Powered by Spotify GitHub Profile API</small>
+  </div>
+
+  <script>
+    
+    const img = document.getElementById("spotify-widget");
+    const baseUrl = img.src.split("?")[0];
+    function refreshImage() {
+      const newUrl = baseUrl + "?uid=31th35o7xchn42xsuon4n3p2iiz4&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&t=" + new Date().getTime();
+      img.src = newUrl;
+    }
+
+    setInterval(refreshImage, 10000);
+  </script>
+
+</body>
+</html>
