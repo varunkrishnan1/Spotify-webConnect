@@ -9,7 +9,7 @@ Powered by [spotify-github-profile](https://github.com/kittinan/spotify-github-p
 
 ## 🚀 Demo
 Check it live here:  
-👉 [Spotify Now Playing](https://varunkrishnan1.github.io/SpotifyWeb-Connect/)
+👉 [Spotify Now Playing](https://varunkrishnan1.github.io/Spotify-webConnect/)
 
 ---
 
